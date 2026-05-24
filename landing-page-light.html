@@ -2431,7 +2431,7 @@
         }
 
         // Custom handles on form submit
-                function handleFormSubmit(event) {
+                        function handleFormSubmit(event) {
             event.preventDefault();
             
             // Xác định form được submit
@@ -2460,16 +2460,34 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
             
-            if (scriptUrl === 'YOUR_GOOGLE_SCRIPT_URL') {
-                // Nếu chưa cấu hình Google Script, chỉ hiện thông báo demo
-                setTimeout(() => {
-                    alert('Cảm ơn bạn đã đăng ký trải nghiệm! Chuyên gia MindX sẽ liên hệ hỗ trợ bạn kiểm tra năng lực công nghệ và sắp xếp lịch học thử miễn phí cho con trong vòng 24 giờ tới.
-
-(Lưu ý: Để thực sự lưu dữ liệu, bạn chỉ cần mở file code và thay thế YOUR_GOOGLE_SCRIPT_URL bằng link Google Apps Script nhé!)');
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalBtnText;
-                    form.reset();
-                }, 1000);
+            // Sử dụng URLSearchParams để gửi dữ liệu dạng form truyền thống (tránh lỗi CORS và JSON)
+            const formData = new URLSearchParams();
+            formData.append('parentName', parentName);
+            formData.append('phone', phone);
+            formData.append('childAge', childAge);
+            
+            // Gửi dữ liệu về Google Sheets thông qua Google Apps Script Web App
+            fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors', // Tránh lỗi CORS trên trình duyệt
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formData.toString()
+            })
+            .then(() => {
+                alert('Cảm ơn bạn đã đăng ký trải nghiệm! Chuyên gia MindX sẽ liên hệ hỗ trợ bạn kiểm tra năng lực công nghệ và sắp xếp lịch học thử miễn phí cho con trong vòng 24 giờ tới.');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Lỗi gửi form:', error);
+                alert('Có lỗi xảy ra khi gửi thông tin. Bạn vui lòng liên hệ hotline hoặc thử lại nhé!');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+        }, 1000);
                 return;
             }
             
