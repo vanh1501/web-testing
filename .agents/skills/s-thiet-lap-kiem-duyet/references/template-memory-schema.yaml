@@ -1,0 +1,33 @@
+> [!IMPORTANT] Override Priority: Tier 2
+
+# memory-schema.md
+version: "2.0"
+domain: "[DOMAIN_NAME]"
+
+knowledge_index:
+  - anchor: "[anchor_1_name]"
+    location: "KB/[anchor_1]/"
+    format: "markdown"
+    naming: "{domain}_{topic}_{YYYY-MM-DD}.md"
+    required_fields: [title, domain_tag, key_insight, confidence, created_by, valid_until]
+    max_size: "500 words"
+    update_policy: "Append new version, không overwrite — keep last 5 versions"
+
+  - anchor: "session_state"
+    location: "artifacts/plans/progress.md"
+    format: "markdown"
+    update_policy: "Overwrite, end-of-session MANDATORY"
+
+dikw_pipeline:
+  raw:       ".agents/memory_bus/ — session logs, unprocessed outputs"
+  data:      "outputs/data/ — structured metrics, MIS logs"
+  knowledge: "KB/ — distilled KIs, anchors above"
+  wisdom:    ".context/ — codified standards, templates"
+
+cross_session_contract:
+  start_of_session:
+    - "Coordinator đọc progress.md TRƯỚC khi dispatch"
+    - "Check for stale KIs (>60 days) → flag for review"
+  end_of_session:
+    - "Coordinator distill → KI candidates → ghi vào KB/"
+    - "Update progress.md: completed, in-progress, pending, decisions"

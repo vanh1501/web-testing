@@ -1,0 +1,35 @@
+> [!IMPORTANT] Override Priority: Tier 2
+
+# hooks-policy.yaml
+version: "2.0"
+domain: "[DOMAIN_NAME]"
+
+hooks:
+  pre_task:
+    trigger: "Trước khi agent bắt đầu bất kỳ task nào"
+    actions:
+      - load_relevant_ki: "Kiểm tra KB/ cho [domain] context"
+      - check_token_budget: "Estimate tokens, cảnh báo nếu >70%"
+      - validate_input_contract: "Input có đủ fields theo I/O CONTRACT không?"
+      - log_task_start: "Ghi vào .agents/memory_bus/ledger.md: task_id, agent, timestamp, input_hash"
+
+  post_task:
+    trigger: "Sau khi agent hoàn thành, trước khi handoff"
+    actions:
+      - distill_ki_candidates: "Có insight mới không? → ghi vào KB/ nếu confidence ≥3/5"
+      - validate_output_contract: "Output có đủ schema không?"
+      - log_task_complete: "Ghi quality_score, duration, token_used vào .agents/memory_bus/ledger.md"
+
+  on_error:
+    trigger: "Khi agent gặp failure, timeout, hoặc reject handoff"
+    actions:
+      - protect_completed_work: "Snapshot trạng thái hiện tại vào .agents/memory_bus/snapshots/"
+      - notify_coordinator: "Gửi alert với error_type + context"
+      - apply_3_strike: "Theo 3-Strike Escalation Rule, stop sau 3 lần fail"
+
+  on_handoff:
+    trigger: "Khi agent chuẩn bị gửi output cho agent khác"
+    actions:
+      - validate_handoff_fields: "Kiểm tra header + body + quality_gate fields"
+      - check_acceptance_criteria: "Output có meet criteria không?"
+      - route_to_maker_checker: "Nếu task_type == [CRITICAL_GATE] → mandatory checker review"

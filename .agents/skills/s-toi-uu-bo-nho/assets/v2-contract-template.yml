@@ -1,0 +1,95 @@
+memory_bus_version: "2.0"
+workspace: "{WORKSPACE_NAME}"
+last_updated: "{CURRENT_DATE}"
+
+# ==========================================
+# [MAS 5.0 Harness] Traceability Contract
+# ==========================================
+trace_config:
+  enabled: true
+  meta_trace_id_format: "XWT-[workspace_name]-[session_id]"
+  propagate_to: "META-HARNESS-TRACE-COLLECTOR"
+  error_threshold: 3
+
+# ==========================================
+# [Dual-Context] Write, Read, & Share Rules
+# ==========================================
+write_rules:
+  conversation_logs:
+    retention: "auto"
+    human_intervention: false
+  knowledge_items:
+    format: "markdown"
+    naming: "{domain}_{topic}_{date}.md"
+    max_length: "500 words"
+    required_fields: [title, domain_tag, key_insight, source_conversation_id, confidence_level]
+  workspace_context:
+    location: ".context/"
+    categories: [project_context, domain_knowledge, team_standards, decision_log, lessons_learned]
+
+read_rules:
+  priority_order:
+    1: "knowledge_items"
+    2: "workspace_context"
+    3: "conversation_logs"
+  ki_check_mandatory: true
+  ki_check_before: "any research or new task"
+
+share_rules:
+  cross_agent_sharing: "via filesystem"
+  namespace_required: true
+  namespace_format: "{agent_role}/{domain}/{item_name}"
+
+# ==========================================
+# [Round 2 Artisan] Dual-Write & Compaction
+# ==========================================
+compaction_protocol:
+  trigger_turn_count: 20
+  action: "summarize_and_flush"
+telemetry_dual_write: "CENTRAL_REGISTRY"
+
+---
+
+# Memory Bus Keys — Global Mapping
+keys:
+  # OPERATIONAL STATE
+  - key: "workspace.state"
+    path: ".agents/memory_bus/coordinator/status/state.json"
+    access: { read: ["ALL"], write: ["{COORD_AGENT_ID}", "Session-Manager"] }
+    schema: { lock_status: "OPEN|LOCKED", current_session: "string", last_updated: "ISO8601" }
+
+  # SESSION MANAGEMENT
+  - key: "sessions.log"
+    path: ".agents/memory_bus/session-log.json"
+    access: { read: ["ALL"], write: ["{COORD_AGENT_ID}"] }
+    schema: { sessions: [{ id: "string", date: "ISO8601", summary: "string", lessons: [], pending: [] }], max_entries: 20 }
+
+  # ACTIVITY LOG
+  - key: "ledger"
+    path: ".agents/memory_bus/ledger.md"
+    access: { read: ["ALL"], write: ["{COORD_AGENT_ID}"] }
+    format: "append-only markdown"
+    schema: "| timestamp | agent | action | detail |"
+
+  # DOMAIN DATA (READ-ONLY)
+  - key: "domain.index"
+    path: ".context/domain/INDEX.md"
+    access: { read: ["ALL"], write: [] }
+    note: "READ ONLY — NEVER write to context files without explicit approval"
+
+---
+
+# Security & Governance
+domains:
+  global: read-only
+  local: read-write
+
+security_gate:
+  write_lock: true
+  
+# Conflict Resolution Protocol
+conflict_resolution:
+  default: "last-writer-wins-with-log"
+  escalate_on: ["MEDIUM", "HIGH"]
+  escalate_to: "Human Orchestrator"
+  log_to: ".agents/memory_bus/ledger.md"

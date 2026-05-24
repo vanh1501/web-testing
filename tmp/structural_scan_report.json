@@ -1,0 +1,13 @@
+{
+  "scan_date": "2026-05-19",
+  "scan_time": "20:51:15",
+  "workspace_path": "D:\\Nathan Job\\GenAI\\MAS-Master-Repo\\managed_workspaces\\mindx-agent_v1",
+  "scanner_version": "2.2.0",
+  "findings": [],
+  "summary": {
+    "total_findings": 0,
+    "systemic_halt": 0,
+    "local_fix": 0,
+    "scans_passed": 14
+  }
+}

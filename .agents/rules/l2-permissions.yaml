@@ -1,0 +1,31 @@
+> [!IMPORTANT] Override Priority: Tier 2
+
+# l2-permissions.yaml
+version: "2.0"
+domain: "mindx-agent"
+
+namespaces:
+  coordinator:
+    agent: "Cố vấn AI MindX"
+    read:  ["*"]                          
+    write: ["artifacts/handoffs/", ".agents/memory_bus/ledger.md", "progress.md", "Quan-Tri/AGENT-LOG.md"]
+    prohibited: ["Kho-Du-Lieu/Raw/"]   
+
+  worker_general:
+    agent: "PRO-W0[1-5]"
+    read:  [".agents/", "Kho-Du-Lieu/", "Du-An/", "Bang-Dieu-Khien/", "artifacts/"]
+    write: ["Kho-Du-Lieu/Ket-Qua/", "Du-An/", "Bang-Dieu-Khien/"]
+    prohibited: [".agents/rules/", ".agents/memory_bus/"]
+
+  architect:
+    agent: "PRO-W06"
+    read:  ["*"]
+    write: [".agents/", "workspace-spec/", "Kho-Du-Lieu/Ket-Qua/"]
+    prohibited: ["Quan-Tri/AGENT-LOG.md"]
+
+global_rules:
+  compliance_level: "MEDIUM" # Maker-Checker applies for HIGH-RISK actions only
+  cross_agent_share: "artifacts/handoffs/ ONLY"
+  direct_share: false
+  session_lock: true
+  on_locked_write: "REJECT + log violation + notify Cố vấn AI MindX"

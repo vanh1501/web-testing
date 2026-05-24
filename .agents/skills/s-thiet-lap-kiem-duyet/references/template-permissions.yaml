@@ -1,0 +1,27 @@
+> [!IMPORTANT] Override Priority: Tier 2
+
+# permissions.yaml
+version: "2.0"
+domain: "[DOMAIN_NAME]"
+
+namespaces:
+  coordinator:
+    read:  ["*"]                          
+    write: ["artifacts/handoffs/", ".agents/memory_bus/ledger.md", "artifacts/plans/progress.md"]
+    prohibited: ["KB/raw_data/"]   
+
+  worker_[domain_cluster]:
+    read:  [".context/", "KB/[domain]/", "artifacts/shared/"]
+    write: ["KB/[domain]/", ".agents/memory_bus/[worker_id]_log.json"]
+    prohibited: ["KB/[other_worker]/"]
+
+  specialist_[role]:
+    read:  ["KB/[narrow_domain]/", "artifacts/handoffs/"]
+    write: ["artifacts/[specialist_output_dir]/", ".agents/memory_bus/[specialist_id]_log.json"]
+    prohibited: ["KB/", "PROJECT.md"]
+
+global_rules:
+  cross_agent_share: "artifacts/handoffs/ ONLY"
+  direct_share: false
+  session_lock: true
+  on_locked_write: "REJECT + log violation + notify coordinator"

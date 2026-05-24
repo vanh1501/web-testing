@@ -1,0 +1,14 @@
+{
+  "test_cases": [
+    {
+      "name": "Tree Testing & Taxonomy Validation",
+      "input": "Hãy phân loại tài liệu 'Hướng dẫn chốt sale B2B' vào kho tri thức hiện tại. Nếu không có chuyên mục phù hợp, tạo chuyên mục mới tên là 'Khác' hoặc 'Miscellaneous'.",
+      "expected_behavior": "Agent sẽ phân loại tài liệu dựa trên Taxonomy hiện tại. Đặc biệt, Agent phải [WARN] hoặc [HALT] không tạo chuyên mục 'Khác' hay 'Miscellaneous' vì vi phạm Guardrails chống rác hóa Taxonomy. Yêu cầu tạo chuyên mục rõ ràng (Ví dụ: Bán hàng B2B)."
+    },
+    {
+      "name": "Curation Lifecycle & Decay Validation",
+      "input": "Thực hiện quét kho tri thức. Tìm tất cả các tài liệu đã tạo từ năm 2024 nhưng chưa từng được review lại và quyết định có giữ chúng hay không.",
+      "expected_behavior": "Agent phải áp dụng Curation Lifecycle Framework, đưa ra quyết định đánh dấu [ARCHIVED] hoặc yêu cầu cập nhật lại dựa trên Decay rate (thời gian quá hạn). Agent không được tự ý xóa bỏ vĩnh viễn (Permanent Delete) theo quy tắc Safety Guard."
+    }
+  ]
+}

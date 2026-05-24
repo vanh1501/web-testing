@@ -1,0 +1,61 @@
+{
+  "skill": "workflow-builder",
+  "version": "2.0",
+  "description": "Test cases for tri-modal workflow engine: CREATE, ASSESS, RESOLVE",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "route": "CREATE",
+      "description": "Create workflow from A-ESOAR R-step",
+      "input": "R-step: 'Tự động tạo CLO từ mô tả môn học'. Agent: W01-Curriculum. Domain: giáo dục đại học.",
+      "expected_output": "Workflow file with YAML frontmatter, Owner metadata @W01, Skill Target clo-writer, ≥3 execution steps, Assigned Skills section, Edge Cases section",
+      "pass_criteria": "File passes CQS size gate (>0.8KB), has metadata block, has skill wiring, description ≥10 words"
+    },
+    {
+      "id": "TC-02",
+      "type": "violation",
+      "route": "CREATE",
+      "description": "Reject workflow creation without A-ESOAR mapping",
+      "input": "User says: 'Tạo workflow xử lý dữ liệu' (no R-step reference, no agent assignment, no domain context)",
+      "expected_output": "CLARIFY: Ask for (a) which A-ESOAR R-step this maps to, (b) which agent owns it, (c) expected input/output",
+      "pass_criteria": "Agent asks ≥2 clarifying questions from WHEN TO CLARIFY instead of generating blind workflow"
+    },
+    {
+      "id": "TC-03",
+      "type": "happy_path",
+      "route": "ASSESS",
+      "description": "Batch audit all workflows and produce scorecard",
+      "input": "Scan .agents/workflows/ containing 8 workflows of varying quality (2 INFRA, 4 CORE, 2 SUPPORT)",
+      "expected_output": "Batch Scorecard with 6-Dimension scores, Library Health Score, A-ESOAR Coverage Matrix, Priority Queue",
+      "pass_criteria": "All 8 workflows scored across W1-W6, coverage ratio calculated, TYPE-CORE weighted 1.5x"
+    },
+    {
+      "id": "TC-04",
+      "type": "violation",
+      "route": "ASSESS",
+      "description": "Flag Zero-Native violation with inline domain logic",
+      "input": "Workflow containing 25 lines of inline CLO parsing logic (regex patterns, mapping tables, scoring formulas)",
+      "expected_output": "W5 score = 0/15, flagged as Zero-Native violation, recommend extraction to skill via WR5 protocol",
+      "pass_criteria": "Inline logic detected, line count reported, extraction target identified, W5 penalty applied correctly"
+    },
+    {
+      "id": "TC-05",
+      "type": "happy_path",
+      "route": "RESOLVE",
+      "description": "Repair Grade D workflow to Grade B",
+      "input": "Workflow with: no YAML frontmatter (W1=0), no metadata (W2=0), blind execution no skill wiring (W4=0). Score: 35/100 (F)",
+      "expected_output": "Frontmatter generated (WR1), metadata injected from .agents/agents.md (WR2), skill wiring added (WR4). Delta report showing F→B improvement.",
+      "pass_criteria": "Post-repair score ≥70/100 (B), delta shows before/after per dimension, all changes traceable to protocol IDs"
+    },
+    {
+      "id": "TC-06",
+      "type": "violation",
+      "route": "RESOLVE",
+      "description": "Refuse to auto-create workflow without user confirmation",
+      "input": "Coverage gap: R-step 'Tự động phân tích portfolio' has no workflow. WE1 triggered.",
+      "expected_output": "HALT: Present R-step analysis with proposed workflow structure. Wait for user approval before creating file.",
+      "pass_criteria": "Agent does NOT auto-create workflow file, presents proposal with input/output/steps for review"
+    }
+  ]
+}

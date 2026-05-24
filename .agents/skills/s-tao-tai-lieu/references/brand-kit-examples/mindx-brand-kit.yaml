@@ -1,0 +1,91 @@
+# ════════════════════════════════════════════════════════════════════
+# Material Studio Brand Kit · MindX Technology School
+# ════════════════════════════════════════════════════════════════════
+# Extracted from: WORKBOOK_PRODUCTION_GUIDELINE_v1.md (Section 2)
+# Validates: Material Studio Brand Kit Schema v1.0
+# ════════════════════════════════════════════════════════════════════
+
+metadata:
+  client_id: mindx
+  client_display_name: "MindX Technology School"
+  schema_version: "1.0"
+  created_at: 2026-05-17
+  updated_at: 2026-05-17
+
+# ───── REQUIRED ─────
+
+color:
+  primary: "E30613"           # MindX brand red — banners, accent, key callouts
+  primary_dark: "B30410"      # Hover/pressed states (digital only)
+  accent_secondary: "003A5D"  # Navy — alternative callout color (📖 reference)
+  neutral_dark: "1F1F1F"      # Body text, headings (charcoal)
+  neutral_mid: "6B6B6B"       # Captions, subtitles, secondary text
+  neutral_light: "F5F5F5"     # Callout backgrounds, subtle fills
+  border: "CCCCCC"            # Table borders, card outlines
+  background: "FFFFFF"        # Page background
+
+typography:
+  font_sans: "Arial"          # Available across Word/Google Docs/LibreOffice
+  font_mono: "Courier New"    # For prompt/code blocks
+  size_xs: 9                  # Page header/footer
+  size_s: 11                  # Banner text (with letter-spacing +60)
+  size_m: 11                  # Body, table, callout body
+  size_l: 16                  # Block title (bold)
+  size_xl: 22                 # TOC heading, section dividers
+  size_xxl: 26                # Cover title (bold)
+
+identity:
+  org_name: "MINDX"           # UPPERCASE for cover banner
+  org_tagline: "TECHNOLOGY SCHOOL"
+  logo_path: null             # Text-only branding for now
+
+voice:
+  language: vi
+  formality: semi_formal
+  cover_reflection_prompt: "TÔI THAM GIA KHÓA HỌC NÀY ĐỂ:"
+  page_label: "Trang"
+  notes_label: "GHI CHÚ CUỐI NGÀY"
+  toc_label: "MỤC LỤC"
+  field_labels:
+    name: "TÊN BOM"
+    department: "PHÒNG BAN"
+    date: "NGÀY"
+
+# ───── OPTIONAL (overrides skeleton defaults) ─────
+
+page:
+  format: A4_portrait
+  margins:
+    top: 1134                 # 2.0 cm
+    bottom: 1134
+    left: 1417                # 2.5 cm — change to mirror_margins for binding
+    right: 1417
+    header: 720               # 1.27 cm
+    footer: 720
+
+# For print-ready binding version (uncomment if needed):
+# page:
+#   mirror_margins:
+#     enabled: true
+#     inner: 1701             # 3.0 cm gáy
+#     outer: 1134             # 2.0 cm mép
+
+callout_overrides:            # MindX-specific callout color mapping
+  goal: "E30613"              # 🎯 red
+  insight: "FBEAF0"           # 💡 light pink bg with red border
+  principle: "E30613"         # 🔑 red
+  warning: "E30613"           # ⚠️ red (strong)
+  critical: "B30410"          # 🚨 dark red
+  reference: "003A5D"         # 📖 navy
+
+content_hooks:                # Pre-fill defaults for MindX programs
+  program_title_default: "MindX Agentic Workspace"
+  field_default_values:
+    organization: "MindX Technology School"
+
+# ════════════════════════════════════════════════════════════════════
+# Notes:
+# - MindX brand established 2025-2026 baseline
+# - Validated on: Day 2 Workbook (28 pages, 58 source slides)
+# - Print-ready variant: enable mirror_margins above for side-staple binding
+# ════════════════════════════════════════════════════════════════════

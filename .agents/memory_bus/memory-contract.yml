@@ -1,0 +1,82 @@
+﻿# Memory Contract V3.0 — mindx-agent_v1
+# Managed by: context-and-memory-ops skill
+
+version: "3.0"
+workspace: "mindx-agent_v1"
+mode: FILE_MODE
+
+# Security Gate
+security_gate:
+  write_lock: true
+  lock_provider: "l0-governance-constitution"
+  injection_guard: true
+
+# Role-Based Access Control (RBAC V2.0)
+role_namespaces:
+  coordinator:
+    agent_id: "Cố vấn AI MindX"
+    read:
+      - ".agents/rules/*"
+      - ".agents/workflows/*"
+      - ".agents/memory_bus/*"
+      - "Bang-Dieu-Khien/*"
+      - "progress.md"
+      - "QUALITY-LOG.md"
+      - "artifacts/**"
+    write:
+      - ".agents/memory_bus/state.json"
+      - ".agents/memory_bus/ledger.md"
+      - "progress.md"
+      - "artifacts/handoffs/QUEUE.md"
+      - "artifacts/session-reports/*"
+      - "QUALITY-LOG.md"
+
+  worker:
+    agent_pattern: "PRO-W0[1-5]"
+    read:
+      - ".agents/skills/*/SKILL.md"
+      - "Kho-Du-Lieu/**"
+      - "Du-An/**"
+      - "Bang-Dieu-Khien/**"
+      - "artifacts/**"
+    write:
+      - "Kho-Du-Lieu/Ket-Qua/**"
+      - "Du-An/**"
+      - "Bang-Dieu-Khien/**"
+      - "Quan-Tri/AGENT-LOG.md"
+      - "Quan-Tri/LICH-SU-THAY-DOI.md"
+      - "artifacts/handoffs/**"
+
+  architect:
+    agent_id: "PRO-W06"
+    read: ["**"]
+    write:
+      - ".agents/**"
+      - "workspace-spec/**"
+      - "AGENTS.md"
+      - "GEMINI.md"
+      - "Quan-Tri/CHINH-SACH.md"
+      - "Quan-Tri/LICH-SU-THAY-DOI.md"
+      - "Kho-Du-Lieu/Ket-Qua/**"
+      - "artifacts/reports/**"
+
+# FinOps & Context Compression (Non-Tech Target)
+finops_guardrails:
+  max_context_window: 15000  # Giới hạn 15K token để tiết kiệm chi phí
+  compaction_trigger: 12000  # Kích hoạt nén trí nhớ khi chạm 12K token
+  auto_rag_pointer: true     # Bật pointer thay vì copy full text cho tài liệu lớn > 5KB
+
+# Compaction Rules
+compaction:
+  progress_max_sessions: 3   # Giữ session ngắn cho non-tech
+  archive_after_days: 15
+  archive_target: "Du-An/_archive/"
+  stale_task_threshold_hours: 24
+
+# Trace & Observability
+trace:
+  session_id_format: "YYYY-MM-DD_HHMM"
+  log_target: "Quan-Tri/AGENT-LOG.md"
+  telemetry_target: "QUALITY-LOG.md"
+  span_id: true
+  trace_id: true

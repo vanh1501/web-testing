@@ -1,0 +1,31 @@
+> [!IMPORTANT] Override Priority: Tier 2
+
+# l3-memory-schema.yaml
+version: "2.0"
+domain: "mindx-agent"
+
+knowledge_index:
+  - anchor: "Du-An"
+    location: "Du-An/"
+    format: "markdown"
+    naming: "{project_id}_{content}_{YYYY-MM-DD}.md"
+    max_size: "15KB"
+    update_policy: "Append new version, không overwrite — keep last 5 versions"
+
+  - anchor: "session_state"
+    location: "progress.md"
+    format: "markdown"
+    update_policy: "Overwrite, end-of-session MANDATORY"
+
+dikw_pipeline:
+  raw:       ".agents/memory_bus/ — session logs, unprocessed outputs"
+  data:      "Kho-Du-Lieu/ — structured metrics, MIS logs"
+  knowledge: "Du-An/ — project specifics"
+  wisdom:    ".agents/skills/ — codified standards, agent instructions"
+
+cross_session_contract:
+  start_of_session:
+    - "Cố vấn AI MindX đọc progress.md TRƯỚC khi dispatch"
+  end_of_session:
+    - "Update progress.md: completed, in-progress, pending, decisions"
+    - "Dọn rác các file sinh ra ngoài vùng quy định (Zero-Floating Law)"

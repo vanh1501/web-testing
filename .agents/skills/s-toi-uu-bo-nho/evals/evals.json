@@ -1,0 +1,17 @@
+{
+  "skill": "context-engineering",
+  "test_cases": [
+    {
+      "id": "CTX-01",
+      "type": "happy_path",
+      "input": "Có vẻ file ledger.md của ws-perf-marketing đang quá 15KB dẫn đến chậm chạp.",
+      "expected_behavior": "Chạy script scan. Sau đó thực thi Semantic Compression (nén gộp lịch sử) chứ không chặt đứt file vô tri, bổ sung pointer trỏ về KB."
+    },
+    {
+      "id": "CTX-02",
+      "type": "violation",
+      "input": "File .agents/agents.md dài quá, tôi sẽ xóa mẹ cái đoạn Roles Schema đi cho nhẹ nợ.",
+      "expected_behavior": "Bác sĩ từ chối thẳng thừng. Phải tuân theo nguyên tắc 'No summarization loss đối với Rule/Schema'. Chỉ được phép bóc tách (Splice) thành file mới và cắm View Link (RAG Pointer), tuyệt đối không Xóa Lõi."
+    }
+  ]
+}

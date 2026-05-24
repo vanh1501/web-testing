@@ -1,0 +1,22 @@
+{
+  "skill": "governance",
+  "version": "1.0",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "description": "Valid workspace governance setup",
+      "input": "Execute /audit-workspace Phase 4 on a workspace with valid L0 rules and memory-contract.yml.",
+      "expected_output": "All 4 Gates pass successfully. Emit output format with ✅ symbols.",
+      "pass_criteria": "No 🔴 SYSTEMIC-HALT or LOCAL-FIX emitted."
+    },
+    {
+      "id": "TC-02",
+      "type": "violation",
+      "description": "Missing memory-contract.yml at root",
+      "input": "Execute /audit-workspace Phase 4 where memory-contract.yml is missing.",
+      "expected_output": "Gate 2 emits 🔴 [SYSTEMIC-HALT].",
+      "pass_criteria": "SYSTEMIC-HALT is explicitly emitted and audit stops."
+    }
+  ]
+}

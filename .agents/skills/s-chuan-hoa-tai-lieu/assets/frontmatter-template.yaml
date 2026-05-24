@@ -1,0 +1,122 @@
+# YAML Front-Matter Templates for docx-style-presets
+#
+# Copy ONE of the blocks below to the TOP of your markdown file,
+# between two `---` lines, then fill in the values.
+#
+# ============================================================
+# TEMPLATE 1 — vn-gov (Vietnamese government, Nghị định 30)
+# ============================================================
+---
+preset: vn-gov
+
+# Cơ quan ban hành (REQUIRED)
+co-quan-chu-quan: "BỘ GIÁO DỤC VÀ ĐÀO TẠO"  # optional — bỏ dòng này nếu không có
+co-quan-ban-hanh: "TRƯỜNG ĐẠI HỌC ABC"        # REQUIRED
+
+# Số ký hiệu (REQUIRED)
+# Format: <số>/<loại>-<cơ quan>. Số < 10 phải có 0 ở trước: "05/CV-ABC"
+so-ky-hieu: "45/CV-ĐHABC"
+
+# Loại văn bản (REQUIRED, UPPERCASE)
+# Một trong: QUYẾT ĐỊNH | BÁO CÁO | TỜ TRÌNH | CÔNG VĂN | THÔNG BÁO
+#          | KẾ HOẠCH | BIÊN BẢN | NGHỊ QUYẾT | CHỈ THỊ | QUY CHẾ
+#          | QUY ĐỊNH | HƯỚNG DẪN | CHƯƠNG TRÌNH | PHƯƠNG ÁN | ĐỀ ÁN
+loai-van-ban: "CÔNG VĂN"
+
+# Trích yếu (REQUIRED)
+trich-yeu: "Về việc báo cáo công tác Quý II năm 2026"
+
+# Địa danh + ngày tháng (REQUIRED)
+dia-danh: "Hà Nội"
+ngay-thang-nam: "2026-05-17"  # ISO format YYYY-MM-DD
+
+# Kính gửi (REQUIRED only for Tờ trình / Báo cáo / Công văn)
+kinh-gui:
+  - "Vụ Tổ chức Cán bộ"
+  - "Vụ Kế hoạch - Tài chính"
+
+# Nơi nhận (REQUIRED — luôn có "Lưu: VT, ..." là dòng cuối)
+noi-nhan:
+  - "Như trên"
+  - "Lưu: VT, ĐT"
+
+# Người ký (REQUIRED)
+nguoi-ky:
+  chuc-vu: "HIỆU TRƯỞNG"
+  # tien-to-quyen-han: optional. Một trong:
+  #   "TM."  (Thay mặt)
+  #   "Q."   (Quyền)
+  #   "KT."  (Ký thay)
+  #   "TL."  (Thừa lệnh)
+  #   "TUQ." (Thừa uỷ quyền)
+  #   ""     (không có, để trống hoặc bỏ dòng này)
+  tien-to-quyen-han: ""
+  ho-ten: "Nguyễn Văn A"
+---
+
+
+# ============================================================
+# TEMPLATE 2 — mckinsey (Consulting/Strategy report)
+# ============================================================
+---
+preset: mckinsey
+title: "Q2 2026 Strategic Review — Market Entry Decision"
+subtitle: "Recommended path forward for SME segment"  # optional
+author: "Nathan Pham"
+org-name: "ABC Consulting"
+date: "2026-05-17"
+include-cover: true       # optional, default true
+include-toc: true         # optional, default false
+include-page-number: true # optional, default true
+---
+
+
+# ============================================================
+# TEMPLATE 3 — modern-minimal (Clean sans-serif)
+# ============================================================
+---
+preset: modern-minimal
+title: "Design Brief — Brand Refresh 2026"
+subtitle: "Visual identity guidelines"  # optional
+author: "Nathan Pham"
+date: "2026-05-17"
+accent-color: "#2EC4B6"   # optional — default teal. Suggested: #FF6B6B (coral), #4361EE (blue), #F4A261 (mustard)
+include-toc: false        # optional
+---
+
+
+# ============================================================
+# TEMPLATE 4 — classic-corporate (Traditional serif)
+# ============================================================
+---
+preset: classic-corporate
+title: "ANNUAL REPORT 2026"
+author: "Board of Directors"
+org-name: "ABC Corporation"
+date: "2026-05-17"
+include-cover: true       # optional
+include-toc: true         # optional
+---
+
+
+# ============================================================
+# Notes
+# ============================================================
+#
+# 1. The skill auto-formats Vietnamese dates with leading zeros:
+#    "2026-01-05" → "ngày 05 tháng 01 năm 2026"
+#    "2026-05-17" → "ngày 17 tháng 5 năm 2026"
+#
+# 2. For vn-gov, if a required field is missing, the skill stops
+#    and tells you what's missing — it won't generate a non-compliant document.
+#
+# 3. For documents with structure (Quyết định ban hành Quy chế, etc.),
+#    use markdown heading hierarchy in your body content:
+#      ## Chương I       → maps to Chương I, số La Mã
+#      ### Mục 1         → maps to Mục, số Ả Rập
+#      #### Điều 1.      → maps to Điều, indented
+#      1. khoản          → numbered list at body level
+#      a) điểm           → letter list (Vietnamese alphabet)
+#
+# 4. Comments in YAML use `#`. Inline comments after a value also work:
+#      key: value  # this is a comment

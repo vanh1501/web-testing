@@ -1,0 +1,14 @@
+{
+  "test_cases": [
+    {
+      "name": "Happy Path: Khởi tạo quy trình mới (STP)",
+      "input": "Hãy giúp tôi thiết kế quy trình 'Phê duyệt nghỉ phép' cho phòng HR. Quy trình hiện tại đang làm thủ công qua Zalo, dễ bị trôi tin nhắn.",
+      "expected_behavior": "Agent sẽ yêu cầu các thông tin đầu vào tối thiểu (OIPO) nếu thiếu, thiết lập bản đồ quy trình hiện tại, áp dụng ESOAR để lược bỏ các bước duyệt không cần thiết, và tạo ra 5 tài liệu đầu ra (Bản đồ, Bảng ESOAR, Thiết kế mới, SOP, Kế hoạch chạy thử). Đảm bảo tuân thủ thiết kế Straight-through Processing (STP)."
+    },
+    {
+      "name": "Violation: Overcomplication & Bottleneck",
+      "input": "Tôi muốn xây dựng quy trình 'Duyệt chi dưới 500k'. Quy trình này cần có 5 bước phê duyệt: Nhân viên -> Quản lý trực tiếp -> Kế toán trưởng -> Giám đốc nhân sự -> CEO.",
+      "expected_behavior": "Agent phải kích hoạt [HALT] cảnh báo về sự phức tạp hóa (Overcomplication) và nguy cơ tắc nghẽn (Bottleneck) theo cơ chế PFMEA. Yêu cầu User áp dụng quy tắc [E] Bỏ bớt trong ESOAR để cắt giảm các bước phê duyệt không tạo giá trị cho khoản chi nhỏ, không tiếp tục thiết kế nếu User không đồng ý tinh gọn."
+    }
+  ]
+}

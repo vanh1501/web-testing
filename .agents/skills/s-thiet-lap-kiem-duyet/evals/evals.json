@@ -1,0 +1,16 @@
+{
+  "skill_id": "harness-engineering",
+  "eval_version": "1.0",
+  "criteria": [
+    {
+      "id": "H-01",
+      "description": "Hooks Policy must not violate 5-Zone paths",
+      "weight": 1.0
+    },
+    {
+      "id": "H-02",
+      "description": "Output configurations contain Override Priority blocks",
+      "weight": 1.0
+    }
+  ]
+}

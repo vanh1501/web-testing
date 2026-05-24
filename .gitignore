@@ -1,0 +1,28 @@
+# Antigravity workspace .gitignore
+
+# Secrets
+.env
+.env.local
+*.key
+*.secret
+
+# Agent runtime artifacts
+Quan-Tri/AGENT-LOG.md.tmp
+.agents/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Tệp tạm
+*.tmp
+*.bak
+*~
+
+# Tệp lớn (> 50MB) không nên track
+# (operator override khi cần)

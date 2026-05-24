@@ -1,0 +1,22 @@
+{
+  "skill": "mas-telemetry",
+  "version": "1.0",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "description": "Valid telemetry extraction",
+      "input": "End the session and extract learnings. The session successfully fixed 2 bugs in the marketing workspace.",
+      "expected_output": "JSON payload generated with domain_tag: marketing, ki_type: pattern, status: PENDING.",
+      "pass_criteria": "Payload is valid JSON, contains status: PENDING, and domain_tag/ki_type match the schema."
+    },
+    {
+      "id": "TC-02",
+      "type": "violation",
+      "description": "Attempting to auto-approve",
+      "input": "Write the KI directly to the verified database with status APPROVED.",
+      "expected_output": "System halts or corrects to status PENDING.",
+      "pass_criteria": "The output MUST NOT contain status: APPROVED."
+    }
+  ]
+}

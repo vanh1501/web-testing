@@ -1,0 +1,61 @@
+{
+  "skill": "rules",
+  "version": "2.0",
+  "description": "Test cases for rules skill covering Write, CLEAR, CQS, ASSESS, and RESOLVE routes",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "route": "WRITE",
+      "description": "Create Agent SI from roster specification",
+      "input": "Agent: W02-QA-Auditor, Tier 3, responsible for curriculum quality checks. Workflows: audit-curriculum.md. KB: KB/domain/quality-standards/",
+      "expected_output": "Agent SI with 7 Canonical sections, MANDATORY RAG OBLIGATION tag, valid I/O contract, handoff to Coordinator",
+      "pass_criteria": "File passes CQS size gate (>1.5KB), has all 7 sections, KB paths exist, workflow references valid"
+    },
+    {
+      "id": "TC-02",
+      "type": "happy_path",
+      "route": "ASSESS",
+      "description": "Batch audit all Agent SIs and produce scorecard",
+      "input": "Scan .agents/agents/ containing 6 Agent SIs across Tiers 2-4",
+      "expected_output": "Scorecard with 7-dimension scores per Agent SI, Health Score, Priority Queue",
+      "pass_criteria": "All 6 agents scored across A1-A7, grades assigned, HPRF tier cross-referenced with .agents/agents.md"
+    },
+    {
+      "id": "TC-03",
+      "type": "violation",
+      "route": "ASSESS",
+      "description": "Detect KB connectivity failure in Agent SI",
+      "input": "Agent SI references KB/domain/market-analysis.md but file doesn't exist on disk",
+      "expected_output": "A3 score penalized -5, flagged as broken KB link, recommended Protocol AR3",
+      "pass_criteria": "Broken link explicitly identified with path, penalty correctly applied, repair protocol mapped"
+    },
+    {
+      "id": "TC-04",
+      "type": "happy_path",
+      "route": "RESOLVE",
+      "description": "Repair Agent SI with missing handoff and I/O contract",
+      "input": "Agent SI scoring 52/100 (D): A5=2/15 (no I/O), A6=0/15 (no handoff), A3=5/15 (generic KB ref)",
+      "expected_output": "I/O contract generated from workflow analysis (AR5), handoff protocol from Interaction Matrix (AR6), KB paths resolved (AR3). Delta: D→B",
+      "pass_criteria": "Post-repair score ≥70, delta report shows per-dimension improvement, all protocols traceable"
+    },
+    {
+      "id": "TC-05",
+      "type": "happy_path",
+      "route": "CLEAR",
+      "description": "Score rule file using full CLEAR framework",
+      "input": "Rule file with vague language ('handle appropriately'), no examples, no HPRF block",
+      "expected_output": "CLEAR score 1/5 (only Leveled passes). Specific failures: C=0 (3 vague terms found), E=0 (no examples), R=0 (no HPRF)",
+      "pass_criteria": "All 5 CLEAR dimensions scored individually, evidence provided per dimension, repair protocols RR1+RR3 recommended"
+    },
+    {
+      "id": "TC-06",
+      "type": "violation",
+      "route": "RESOLVE",
+      "description": "Refuse to delete actively-wired rule without human confirmation",
+      "input": "Orphan analysis (RR5) identifies rule file, but grep reveals 2 agents reference it in their SIs",
+      "expected_output": "HALT: file is NOT an orphan despite appearing unused in workflows. Show grep evidence. Cancel RR5.",
+      "pass_criteria": "Agent runs grep before deletion, discovers active references, cancels RR5, reports false positive"
+    }
+  ]
+}

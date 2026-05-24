@@ -1,0 +1,30 @@
+{
+  "skill": "doc-formatting",
+  "version": "2.0",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "description": "Chuẩn hoá một file Markdown lộn xộn, thiếu frontmatter và chứa nhiều khoảng trắng thừa",
+      "input": "Hãy chuẩn hoá file markdown này cho tôi để đưa vào RAG. (File: test_input.md có chứa 3 dòng trống liên tục và heading dính chèn chữ)",
+      "expected_output": "Thực thi scripts/format/format_md_query_ready.py trên file. Trả về file .md đã có YAML frontmatter, cách dòng heading chuẩn và xoá sạch dòng trống liên tục.",
+      "pass_criteria": "File output không còn 3 dòng trống liên tục, có yaml string '---' ở đầu."
+    },
+    {
+      "id": "TC-02",
+      "type": "violation",
+      "description": "Yêu cầu xử lý Markdown nhưng file đầu vào cố tình nhồi mã HTML (div, span, iframe)",
+      "input": "Tôi scrape được dữ liệu này ra HTML, ông cắt gọt HTML tag rồi đổi sang MD giữ nguyên cái <div> bọc ngoài để tôi style bằng CSS nhé.",
+      "expected_output": "REJECT yêu cầu giữ lại thẻ <div>. Từ chối và nhắc nhở Rule số 1: Zero HTML Mandatory.",
+      "pass_criteria": "Agent phải từ chối (REJECT) việc giữ lại thẻ HTML trong file Markdown query-ready."
+    },
+    {
+      "id": "TC-03",
+      "type": "happy_path",
+      "description": "Viết công văn hành chính",
+      "input": "Soạn cho tôi công văn gửi sở ban ngành xin lùi tiến độ nộp báo cáo",
+      "expected_output": "Sử dụng standards/nd30.md và tạo file DOCX đen trắng, tuyệt đối không dùng color skin.",
+      "pass_criteria": "File DOCX output chuẩn trắng đen (NĐ 30), không trộn lẫn format doanh nghiệp đổi màu heading."
+    }
+  ]
+}

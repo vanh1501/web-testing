@@ -1,0 +1,13 @@
+{
+  "skill": "qa",
+  "version": "1.0",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "input": "/audit-workspace --maturity=prod --strict",
+      "expected_output": "Full 100-point Executive_Audit_Report.md with 7 Phases.",
+      "pass_criteria": "Report includes Per-Component Scan Log and no phase merging."
+    }
+  ]
+}

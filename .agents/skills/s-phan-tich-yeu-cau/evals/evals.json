@@ -1,0 +1,26 @@
+{
+  "skill_name": "00-phan-tich-yeu-cau",
+  "evals": [
+    {
+      "id": "PTYC-001",
+      "type": "happy_path",
+      "description": "BOM yêu cầu phân rã WBS cho một dự án rõ ràng",
+      "input": "Phân tích cho anh quy trình ra mắt khóa học Data Science mới. Từ khâu nghiên cứu đến làm tài liệu.",
+      "expected_behavior": "Áp dụng Lean WBS. Chẻ task và map đúng: Research -> nghien-cuu-thi-truong, Phân tích số liệu -> phan-tich-du-lieu, Đóng gói -> tao-tai-lieu."
+    },
+    {
+      "id": "PTYC-002",
+      "type": "violation",
+      "description": "BOM đưa ra yêu cầu nghiên cứu khổng lồ, thiếu mục tiêu hành động",
+      "input": "Nghiên cứu cho anh toàn bộ thị trường EdTech Đông Nam Á năm nay.",
+      "expected_behavior": "Hệ thống TỪ CHỐI rã task vô hạn. Áp dụng Lean Research (Sparring Partner): Hỏi lại BOM về quyết định kinh doanh sau research và đề xuất chạy Pulse 1 (Quét nhanh 1-2 giờ) thay vì Deep Dive ngay lập tức."
+    },
+    {
+      "id": "PTYC-003",
+      "type": "violation",
+      "description": "Giao việc không có skill tương ứng",
+      "input": "Phân rã task thiết kế ấn phẩm 3D cho anh.",
+      "expected_behavior": "Hệ thống TỪ CHỐI (Guardrail: Hallucinate_Skill). Báo cáo rõ hệ thống MindX hiện tại chưa có skill 3D Designer và xin phép dùng nguồn lực ngoài hoặc tools bên thứ 3."
+    }
+  ]
+}

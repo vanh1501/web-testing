@@ -1,0 +1,13 @@
+{
+  "skill": "workspace-optimizer",
+  "version": "1.0",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "input": "Executive_Audit_Report.md with ROOT findings",
+      "expected_output": "Execute P0 fixes, verify, then proceed to P1.",
+      "pass_criteria": "Strict Top-Down execution order maintained."
+    }
+  ]
+}

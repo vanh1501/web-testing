@@ -1,0 +1,61 @@
+{
+  "skill": "architecture",
+  "version": "1.0",
+  "description": "Test cases for architecture DESIGN, 5-Zone AUDIT, Hierarchy VALIDATION, and RESOLVE routes",
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "type": "happy_path",
+      "route": "5-zone-audit",
+      "description": "Full 5-Zone compliance scan on workspace",
+      "input": "Workspace path with all 5 zones present but .context/domain/ contains a methodology file (data placement violation)",
+      "expected_output": "Zone paths: all PASS. Data placement: 1 CRITICAL violation — methodology file in .context/. Recommendation: Move to KB/domain/.",
+      "pass_criteria": "All zone paths checked against 5-zone-audit-checklist.md, data placement scan detects contamination, severity correctly classified as Critical"
+    },
+    {
+      "id": "TC-02",
+      "type": "happy_path",
+      "route": "hierarchy-validation",
+      "description": "Hierarchy validation detecting orphan SI file",
+      "input": ".agents/agents.md roster with 5 agents. .agents/agents/ contains 7 .md files (2 orphans not in roster).",
+      "expected_output": "Roster check: PASS (5/5 files exist). Orphan check: WARNING — 2 files not in roster. Lists orphan filenames with recommendation.",
+      "pass_criteria": "Correctly cross-references roster to physical files, detects both orphans, classifies as Warning not Critical"
+    },
+    {
+      "id": "TC-03",
+      "type": "violation",
+      "route": "hierarchy-validation",
+      "description": "T3↔T3 direct communication must be flagged as Critical",
+      "input": ".agents/agents.md Interaction Matrix cell [W01][W02] = 'Direct handoff' instead of '❌ (Via COORD)'",
+      "expected_output": "CRITICAL: T3↔T3 direct communication violation between W01 and W02. Strict routing rule violated. Recommend SR6 repair.",
+      "pass_criteria": "Agent detects non-ban marker in T3↔T3 cell, classifies as Critical, recommends SR6 protocol"
+    },
+    {
+      "id": "TC-04",
+      "type": "happy_path",
+      "route": "resolve",
+      "description": "Fix missing zone directories with proper structure",
+      "input": "5-Zone audit finding: Missing artifacts/handoffs/, missing .agents/tests/, missing tmp/",
+      "expected_output": "SR1 applied: 3 directories created. Critical (artifacts/handoffs/) created first, then Warning (tests/, tmp/). Re-scan shows 0 missing.",
+      "pass_criteria": "Directories created in severity order, parent directories auto-created, verification scan passes"
+    },
+    {
+      "id": "TC-05",
+      "type": "violation",
+      "route": "resolve",
+      "description": "Architecture skill must NOT create Agent SI content — delegate to rules",
+      "input": "Finding: .agents/agents/ is empty (SR3). User says 'fix it — generate agent files'.",
+      "expected_output": "Architecture creates directory structure only. Delegates Agent SI content creation to rules skill: 'Agent SI content is rules skill scope. I created the folder structure. Delegate to rules Route 1 for SI generation.'",
+      "pass_criteria": "Agent refuses to write SI content, correctly identifies scope boundary, delegates to rules skill"
+    },
+    {
+      "id": "TC-06",
+      "type": "happy_path",
+      "route": "design",
+      "description": "Architecture design from SCOPE Brief",
+      "input": "SCOPE Brief: Team of 8 managing an e-commerce platform. Processes: Order management, Inventory tracking, Customer support, Reporting.",
+      "expected_output": "Value Chain: 4-step process. Functional Groups: 3-4 departments (Operations, Customer Success, Analytics + Coordinator). Interaction Matrix: T3↔T3 blocked. Blueprint with diagrams.",
+      "pass_criteria": "Minimum 3 Functional Groups (Execution + QA + Coordinator), Interaction Matrix enforces T3 routing, Value Chain covers all 4 processes"
+    }
+  ]
+}

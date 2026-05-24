@@ -1,0 +1,2111 @@
+{
+  "meta": {
+    "workspace": "d:\\Nathan Job\\GenAI\\MAS-Master-Repo\\managed_workspaces\\mindx-agent_v1",
+    "aggregated_at": "2026-05-19T20:47:49.727347",
+    "scanner_version": "3.0.0",
+    "batch_sources": {
+      "phase_0_scanner": "LOADED",
+      "batch_A": "LOADED",
+      "batch_B": "LOADED",
+      "batch_C": "LOADED"
+    }
+  },
+  "summary": {
+    "total_findings": 100,
+    "systemic_halt": 8,
+    "local_fix": 92,
+    "warnings": 0,
+    "batches_loaded": 4,
+    "batches_missing": 0
+  },
+  "all_findings": [
+    {
+      "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\assets",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_scripts",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\scripts",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\scripts",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\assets",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_scripts",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-thiet-lap-kiem-duyet_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+      "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_workflows_02-reporting",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\workflows\\02-reporting",
+      "file": ".agents\\workflows\\02-reporting",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-giam-sat-tuan-thu-constitution.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-giam-sat-tuan-thu-constitution.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-safety-and-escalation.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-safety-and-escalation.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-identity-and-scope.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-identity-and-scope.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-cos-routing-protocol.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-cos-routing-protocol.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l1-operational-crud.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l1-operational-crud.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l2-harness-hooks.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-harness-hooks.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l2-maker-checker.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-maker-checker.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-01-khoi-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/workflows/01-khoi-dong-phien.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-01-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/workflows/01-dong-phien.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-AGENTS.md-L1-swarm-registry.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "AGENTS.md references non-existent file: .agents/quan-ly-quy-tac/L1-swarm-registry.md",
+      "file": "AGENTS.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in AGENTS.md to correct path"
+    },
+    {
+      "id": "EC-2-L2-CHANGELOG.md",
+      "severity": "LOCAL-FIX",
+      "category": "HPRF_CHECK",
+      "detail": "Missing HPRF Override Priority block: L2-CHANGELOG.md",
+      "file": ".agents\\rules\\L2-CHANGELOG.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-06"
+    },
+    {
+      "id": "EC-2-r15-onboarding-trigger.md",
+      "severity": "LOCAL-FIX",
+      "category": "HPRF_CHECK",
+      "detail": "Missing HPRF Override Priority block: r15-onboarding-trigger.md",
+      "file": ".agents\\rules\\r15-onboarding-trigger.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-06"
+    },
+    {
+      "id": "EC-3-s-chuan-hoa-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_4TIER",
+      "detail": "Skill 's-chuan-hoa-tai-lieu' missing subdirs: references",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+      "missing_dirs": [
+        "references"
+      ],
+      "auto_fixable": true,
+      "fix_pattern": "SHP-26"
+    },
+    {
+      "id": "EC-3-s-thiet-ke-bao-cao-bi",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_4TIER",
+      "detail": "Skill 's-thiet-ke-bao-cao-bi' missing subdirs: assets, references, scripts, evals",
+      "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+      "missing_dirs": [
+        "assets",
+        "references",
+        "scripts",
+        "evals"
+      ],
+      "auto_fixable": true,
+      "fix_pattern": "SHP-26"
+    },
+    {
+      "id": "EC-13-s-chuan-hoa-tai-lieu-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-chuan-hoa-tai-lieu' SKILL.md is 8870 bytes (8.7KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu\\SKILL.md",
+      "size_bytes": 8870,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-do-luong-hieu-suat-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-do-luong-hieu-suat' SKILL.md is 5545 bytes (5.4KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\SKILL.md",
+      "size_bytes": 5545,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-dong-bo-muc-luc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-dong-bo-muc-luc' SKILL.md is 8367 bytes (8.2KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-dong-bo-muc-luc\\SKILL.md",
+      "size_bytes": 8367,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-giam-sat-tuan-thu-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-giam-sat-tuan-thu' SKILL.md is 5379 bytes (5.3KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\SKILL.md",
+      "size_bytes": 5379,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-quan-ly-kho-tri-thuc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-quan-ly-kho-tri-thuc' SKILL.md is 9893 bytes (9.7KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc\\SKILL.md",
+      "size_bytes": 9893,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-thiet-ke-kien-truc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-thiet-ke-kien-truc' SKILL.md is 8823 bytes (8.6KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-thiet-ke-kien-truc\\SKILL.md",
+      "size_bytes": 8823,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-thiet-lap-kiem-duyet-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-thiet-lap-kiem-duyet' SKILL.md is 6130 bytes (6.0KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\SKILL.md",
+      "size_bytes": 6130,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-toi-uu-bo-nho-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-toi-uu-bo-nho' SKILL.md is 6056 bytes (5.9KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-toi-uu-bo-nho\\SKILL.md",
+      "size_bytes": 6056,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-xay-dung-quy-trinh-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-xay-dung-quy-trinh' SKILL.md is 9017 bytes (8.8KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-xay-dung-quy-trinh\\SKILL.md",
+      "size_bytes": 9017,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-4-s-chuan-hoa-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-chuan-hoa-tai-lieu",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-dong-bo-muc-luc",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-dong-bo-muc-luc",
+      "file": ".agents\\skills\\s-dong-bo-muc-luc",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-nghien-cuu-thi-truong",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-nghien-cuu-thi-truong",
+      "file": ".agents\\skills\\s-nghien-cuu-thi-truong",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-phan-tich-du-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-phan-tich-du-lieu",
+      "file": ".agents\\skills\\s-phan-tich-du-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-phan-tich-yeu-cau",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-phan-tich-yeu-cau",
+      "file": ".agents\\skills\\s-phan-tich-yeu-cau",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-quan-ly-du-an",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-quan-ly-du-an",
+      "file": ".agents\\skills\\s-quan-ly-du-an",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-quan-ly-kho-tri-thuc",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-quan-ly-kho-tri-thuc",
+      "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-tao-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-tao-tai-lieu",
+      "file": ".agents\\skills\\s-tao-tai-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-thiet-ke-bao-cao-bi",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-thiet-ke-bao-cao-bi",
+      "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-12-w-khoi-tao-du-an-moi.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-khoi-tao-du-an-moi.md",
+      "file": ".agents\\workflows\\core-business\\w-khoi-tao-du-an-moi.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-quan-tri-du-an.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-quan-tri-du-an.md",
+      "file": ".agents\\workflows\\core-business\\w-quan-tri-du-an.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-cai-dat-giai-phap.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-cai-dat-giai-phap.md",
+      "file": ".agents\\workflows\\system-ops\\w-cai-dat-giai-phap.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-tao-quy-trinh-moi.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-tao-quy-trinh-moi.md",
+      "file": ".agents\\workflows\\system-ops\\w-tao-quy-trinh-moi.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-7-CHANGELOG.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): CHANGELOG.md",
+      "file": ".agents\\workflows\\CHANGELOG.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-WORKFLOW_INDEX.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): WORKFLOW_INDEX.md",
+      "file": ".agents\\workflows\\WORKFLOW_INDEX.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-dong-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-dong-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-khoi-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-khoi-dong-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-khoi-dong-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-luu-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-luu-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-luu-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-onboarding-tour.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-onboarding-tour.md",
+      "file": ".agents\\workflows\\system-ops\\w-onboarding-tour.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-deploy-appendix.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-deploy-appendix.md",
+      "file": ".agents\\workflows\\system-ops\\components\\w-deploy-appendix.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-00-xay-dung-quy-trinh.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-00-xay-dung-quy-trinh.md",
+      "file": ".agents\\workflows\\_archive\\v1_backup\\w-00-xay-dung-quy-trinh.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\assets",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_scripts",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\scripts",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\scripts",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\assets",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_scripts",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_skills_s-thiet-lap-kiem-duyet_assets",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+      "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-9-.agents_workflows_02-reporting",
+      "severity": "LOCAL-FIX",
+      "category": "EMPTY_DIR",
+      "detail": "Empty directory: .agents\\workflows\\02-reporting",
+      "file": ".agents\\workflows\\02-reporting",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-32"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-giam-sat-tuan-thu-constitution.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-giam-sat-tuan-thu-constitution.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-safety-and-escalation.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-safety-and-escalation.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-identity-and-scope.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-identity-and-scope.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l0-cos-routing-protocol.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-cos-routing-protocol.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l1-operational-crud.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l1-operational-crud.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l2-harness-hooks.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-harness-hooks.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-l2-maker-checker.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-maker-checker.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-01-khoi-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/workflows/01-khoi-dong-phien.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-GEMINI.md-01-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "GEMINI.md references non-existent file: .agents/workflows/01-dong-phien.md",
+      "file": "GEMINI.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in GEMINI.md to correct path"
+    },
+    {
+      "id": "EC-11-AGENTS.md-L1-swarm-registry.md",
+      "severity": "LOCAL-FIX",
+      "category": "BROKEN_REF",
+      "detail": "AGENTS.md references non-existent file: .agents/quan-ly-quy-tac/L1-swarm-registry.md",
+      "file": "AGENTS.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-34",
+      "manual_reason": "Update reference in AGENTS.md to correct path"
+    },
+    {
+      "id": "EC-2-L2-CHANGELOG.md",
+      "severity": "LOCAL-FIX",
+      "category": "HPRF_CHECK",
+      "detail": "Missing HPRF Override Priority block: L2-CHANGELOG.md",
+      "file": ".agents\\rules\\L2-CHANGELOG.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-06"
+    },
+    {
+      "id": "EC-2-r15-onboarding-trigger.md",
+      "severity": "LOCAL-FIX",
+      "category": "HPRF_CHECK",
+      "detail": "Missing HPRF Override Priority block: r15-onboarding-trigger.md",
+      "file": ".agents\\rules\\r15-onboarding-trigger.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-06"
+    },
+    {
+      "id": "EC-3-s-chuan-hoa-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_4TIER",
+      "detail": "Skill 's-chuan-hoa-tai-lieu' missing subdirs: references",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+      "missing_dirs": [
+        "references"
+      ],
+      "auto_fixable": true,
+      "fix_pattern": "SHP-26"
+    },
+    {
+      "id": "EC-3-s-thiet-ke-bao-cao-bi",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_4TIER",
+      "detail": "Skill 's-thiet-ke-bao-cao-bi' missing subdirs: assets, references, scripts, evals",
+      "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+      "missing_dirs": [
+        "assets",
+        "references",
+        "scripts",
+        "evals"
+      ],
+      "auto_fixable": true,
+      "fix_pattern": "SHP-26"
+    },
+    {
+      "id": "EC-13-s-chuan-hoa-tai-lieu-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-chuan-hoa-tai-lieu' SKILL.md is 8870 bytes (8.7KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu\\SKILL.md",
+      "size_bytes": 8870,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-do-luong-hieu-suat-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-do-luong-hieu-suat' SKILL.md is 5545 bytes (5.4KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-do-luong-hieu-suat\\SKILL.md",
+      "size_bytes": 5545,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-dong-bo-muc-luc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-dong-bo-muc-luc' SKILL.md is 8367 bytes (8.2KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-dong-bo-muc-luc\\SKILL.md",
+      "size_bytes": 8367,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-giam-sat-tuan-thu-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-giam-sat-tuan-thu' SKILL.md is 5379 bytes (5.3KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-giam-sat-tuan-thu\\SKILL.md",
+      "size_bytes": 5379,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-quan-ly-kho-tri-thuc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-quan-ly-kho-tri-thuc' SKILL.md is 9893 bytes (9.7KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc\\SKILL.md",
+      "size_bytes": 9893,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-thiet-ke-kien-truc-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-thiet-ke-kien-truc' SKILL.md is 8823 bytes (8.6KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-thiet-ke-kien-truc\\SKILL.md",
+      "size_bytes": 8823,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-thiet-lap-kiem-duyet-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-thiet-lap-kiem-duyet' SKILL.md is 6130 bytes (6.0KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\SKILL.md",
+      "size_bytes": 6130,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-toi-uu-bo-nho-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-toi-uu-bo-nho' SKILL.md is 6056 bytes (5.9KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-toi-uu-bo-nho\\SKILL.md",
+      "size_bytes": 6056,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-13-s-xay-dung-quy-trinh-soft",
+      "severity": "LOCAL-FIX",
+      "category": "SKILL_SKELETON",
+      "detail": "Skill 's-xay-dung-quy-trinh' SKILL.md is 9017 bytes (8.8KB < 10KB) — under-developed",
+      "file": ".agents\\skills\\s-xay-dung-quy-trinh\\SKILL.md",
+      "size_bytes": 9017,
+      "threshold": 10240,
+      "auto_fixable": false,
+      "fix_pattern": "SHP-23",
+      "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+    },
+    {
+      "id": "EC-4-s-chuan-hoa-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-chuan-hoa-tai-lieu",
+      "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-dong-bo-muc-luc",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-dong-bo-muc-luc",
+      "file": ".agents\\skills\\s-dong-bo-muc-luc",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-nghien-cuu-thi-truong",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-nghien-cuu-thi-truong",
+      "file": ".agents\\skills\\s-nghien-cuu-thi-truong",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-phan-tich-du-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-phan-tich-du-lieu",
+      "file": ".agents\\skills\\s-phan-tich-du-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-phan-tich-yeu-cau",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-phan-tich-yeu-cau",
+      "file": ".agents\\skills\\s-phan-tich-yeu-cau",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-quan-ly-du-an",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-quan-ly-du-an",
+      "file": ".agents\\skills\\s-quan-ly-du-an",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-quan-ly-kho-tri-thuc",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-quan-ly-kho-tri-thuc",
+      "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-tao-tai-lieu",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-tao-tai-lieu",
+      "file": ".agents\\skills\\s-tao-tai-lieu",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-4-s-thiet-ke-bao-cao-bi",
+      "severity": "LOCAL-FIX",
+      "category": "GHOST_SKILL",
+      "detail": "Ghost skill (unwired): s-thiet-ke-bao-cao-bi",
+      "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-11",
+      "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+    },
+    {
+      "id": "EC-12-w-khoi-tao-du-an-moi.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-khoi-tao-du-an-moi.md",
+      "file": ".agents\\workflows\\core-business\\w-khoi-tao-du-an-moi.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-quan-tri-du-an.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-quan-tri-du-an.md",
+      "file": ".agents\\workflows\\core-business\\w-quan-tri-du-an.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-cai-dat-giai-phap.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-cai-dat-giai-phap.md",
+      "file": ".agents\\workflows\\system-ops\\w-cai-dat-giai-phap.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-12-w-tao-quy-trinh-moi.md",
+      "severity": "SYSTEMIC-HALT",
+      "category": "TEMPLATE_CHECK",
+      "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-tao-quy-trinh-moi.md",
+      "file": ".agents\\workflows\\system-ops\\w-tao-quy-trinh-moi.md",
+      "auto_fixable": false,
+      "fix_pattern": "SHP-00",
+      "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+    },
+    {
+      "id": "EC-7-CHANGELOG.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): CHANGELOG.md",
+      "file": ".agents\\workflows\\CHANGELOG.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-WORKFLOW_INDEX.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): WORKFLOW_INDEX.md",
+      "file": ".agents\\workflows\\WORKFLOW_INDEX.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-dong-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-dong-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-khoi-dong-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-khoi-dong-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-khoi-dong-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-luu-phien.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-luu-phien.md",
+      "file": ".agents\\workflows\\system-ops\\w-luu-phien.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-onboarding-tour.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-onboarding-tour.md",
+      "file": ".agents\\workflows\\system-ops\\w-onboarding-tour.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-deploy-appendix.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-deploy-appendix.md",
+      "file": ".agents\\workflows\\system-ops\\components\\w-deploy-appendix.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    },
+    {
+      "id": "EC-7-w-00-xay-dung-quy-trinh.md",
+      "severity": "LOCAL-FIX",
+      "category": "WF_METADATA_CHECK",
+      "detail": "Workflow missing YAML metadata (description/triggers): w-00-xay-dung-quy-trinh.md",
+      "file": ".agents\\workflows\\_archive\\v1_backup\\w-00-xay-dung-quy-trinh.md",
+      "auto_fixable": true,
+      "fix_pattern": "SHP-WF01",
+      "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+    }
+  ],
+  "per_batch": {
+    "phase_0_scanner": {
+      "finding_count": 50,
+      "findings": [
+        {
+          "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\assets",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_scripts",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\scripts",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\scripts",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\assets",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_scripts",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-thiet-lap-kiem-duyet_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+          "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_workflows_02-reporting",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\workflows\\02-reporting",
+          "file": ".agents\\workflows\\02-reporting",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-giam-sat-tuan-thu-constitution.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-giam-sat-tuan-thu-constitution.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-safety-and-escalation.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-safety-and-escalation.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-identity-and-scope.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-identity-and-scope.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-cos-routing-protocol.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-cos-routing-protocol.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l1-operational-crud.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l1-operational-crud.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l2-harness-hooks.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-harness-hooks.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l2-maker-checker.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-maker-checker.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-01-khoi-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/workflows/01-khoi-dong-phien.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-01-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/workflows/01-dong-phien.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-AGENTS.md-L1-swarm-registry.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "AGENTS.md references non-existent file: .agents/quan-ly-quy-tac/L1-swarm-registry.md",
+          "file": "AGENTS.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in AGENTS.md to correct path"
+        },
+        {
+          "id": "EC-2-L2-CHANGELOG.md",
+          "severity": "LOCAL-FIX",
+          "category": "HPRF_CHECK",
+          "detail": "Missing HPRF Override Priority block: L2-CHANGELOG.md",
+          "file": ".agents\\rules\\L2-CHANGELOG.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-06"
+        },
+        {
+          "id": "EC-2-r15-onboarding-trigger.md",
+          "severity": "LOCAL-FIX",
+          "category": "HPRF_CHECK",
+          "detail": "Missing HPRF Override Priority block: r15-onboarding-trigger.md",
+          "file": ".agents\\rules\\r15-onboarding-trigger.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-06"
+        },
+        {
+          "id": "EC-3-s-chuan-hoa-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_4TIER",
+          "detail": "Skill 's-chuan-hoa-tai-lieu' missing subdirs: references",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+          "missing_dirs": [
+            "references"
+          ],
+          "auto_fixable": true,
+          "fix_pattern": "SHP-26"
+        },
+        {
+          "id": "EC-3-s-thiet-ke-bao-cao-bi",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_4TIER",
+          "detail": "Skill 's-thiet-ke-bao-cao-bi' missing subdirs: assets, references, scripts, evals",
+          "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+          "missing_dirs": [
+            "assets",
+            "references",
+            "scripts",
+            "evals"
+          ],
+          "auto_fixable": true,
+          "fix_pattern": "SHP-26"
+        },
+        {
+          "id": "EC-13-s-chuan-hoa-tai-lieu-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-chuan-hoa-tai-lieu' SKILL.md is 8870 bytes (8.7KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu\\SKILL.md",
+          "size_bytes": 8870,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-do-luong-hieu-suat-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-do-luong-hieu-suat' SKILL.md is 5545 bytes (5.4KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\SKILL.md",
+          "size_bytes": 5545,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-dong-bo-muc-luc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-dong-bo-muc-luc' SKILL.md is 8367 bytes (8.2KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-dong-bo-muc-luc\\SKILL.md",
+          "size_bytes": 8367,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-giam-sat-tuan-thu-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-giam-sat-tuan-thu' SKILL.md is 5379 bytes (5.3KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\SKILL.md",
+          "size_bytes": 5379,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-quan-ly-kho-tri-thuc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-quan-ly-kho-tri-thuc' SKILL.md is 9893 bytes (9.7KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc\\SKILL.md",
+          "size_bytes": 9893,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-thiet-ke-kien-truc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-thiet-ke-kien-truc' SKILL.md is 8823 bytes (8.6KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-thiet-ke-kien-truc\\SKILL.md",
+          "size_bytes": 8823,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-thiet-lap-kiem-duyet-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-thiet-lap-kiem-duyet' SKILL.md is 6130 bytes (6.0KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\SKILL.md",
+          "size_bytes": 6130,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-toi-uu-bo-nho-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-toi-uu-bo-nho' SKILL.md is 6056 bytes (5.9KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-toi-uu-bo-nho\\SKILL.md",
+          "size_bytes": 6056,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-xay-dung-quy-trinh-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-xay-dung-quy-trinh' SKILL.md is 9017 bytes (8.8KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-xay-dung-quy-trinh\\SKILL.md",
+          "size_bytes": 9017,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-4-s-chuan-hoa-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-chuan-hoa-tai-lieu",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-dong-bo-muc-luc",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-dong-bo-muc-luc",
+          "file": ".agents\\skills\\s-dong-bo-muc-luc",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-nghien-cuu-thi-truong",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-nghien-cuu-thi-truong",
+          "file": ".agents\\skills\\s-nghien-cuu-thi-truong",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-phan-tich-du-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-phan-tich-du-lieu",
+          "file": ".agents\\skills\\s-phan-tich-du-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-phan-tich-yeu-cau",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-phan-tich-yeu-cau",
+          "file": ".agents\\skills\\s-phan-tich-yeu-cau",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-quan-ly-du-an",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-quan-ly-du-an",
+          "file": ".agents\\skills\\s-quan-ly-du-an",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-quan-ly-kho-tri-thuc",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-quan-ly-kho-tri-thuc",
+          "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-tao-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-tao-tai-lieu",
+          "file": ".agents\\skills\\s-tao-tai-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-thiet-ke-bao-cao-bi",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-thiet-ke-bao-cao-bi",
+          "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-12-w-khoi-tao-du-an-moi.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-khoi-tao-du-an-moi.md",
+          "file": ".agents\\workflows\\core-business\\w-khoi-tao-du-an-moi.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-quan-tri-du-an.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-quan-tri-du-an.md",
+          "file": ".agents\\workflows\\core-business\\w-quan-tri-du-an.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-cai-dat-giai-phap.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-cai-dat-giai-phap.md",
+          "file": ".agents\\workflows\\system-ops\\w-cai-dat-giai-phap.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-tao-quy-trinh-moi.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-tao-quy-trinh-moi.md",
+          "file": ".agents\\workflows\\system-ops\\w-tao-quy-trinh-moi.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-7-CHANGELOG.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): CHANGELOG.md",
+          "file": ".agents\\workflows\\CHANGELOG.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-WORKFLOW_INDEX.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): WORKFLOW_INDEX.md",
+          "file": ".agents\\workflows\\WORKFLOW_INDEX.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-dong-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-dong-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-khoi-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-khoi-dong-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-khoi-dong-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-luu-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-luu-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-luu-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-onboarding-tour.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-onboarding-tour.md",
+          "file": ".agents\\workflows\\system-ops\\w-onboarding-tour.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-deploy-appendix.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-deploy-appendix.md",
+          "file": ".agents\\workflows\\system-ops\\components\\w-deploy-appendix.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-00-xay-dung-quy-trinh.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-00-xay-dung-quy-trinh.md",
+          "file": ".agents\\workflows\\_archive\\v1_backup\\w-00-xay-dung-quy-trinh.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        }
+      ]
+    },
+    "batch_A": {
+      "finding_count": 50,
+      "findings": [
+        {
+          "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\assets",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-do-luong-hieu-suat_scripts",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-do-luong-hieu-suat\\scripts",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\scripts",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\assets",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-giam-sat-tuan-thu_scripts",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\scripts",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_skills_s-thiet-lap-kiem-duyet_assets",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+          "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\assets",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-9-.agents_workflows_02-reporting",
+          "severity": "LOCAL-FIX",
+          "category": "EMPTY_DIR",
+          "detail": "Empty directory: .agents\\workflows\\02-reporting",
+          "file": ".agents\\workflows\\02-reporting",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-32"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-giam-sat-tuan-thu-constitution.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-giam-sat-tuan-thu-constitution.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-safety-and-escalation.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-safety-and-escalation.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-identity-and-scope.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-identity-and-scope.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l0-cos-routing-protocol.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l0-cos-routing-protocol.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l1-operational-crud.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l1-operational-crud.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l2-harness-hooks.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-harness-hooks.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-l2-maker-checker.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/quan-ly-quy-tac/l2-maker-checker.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-01-khoi-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/workflows/01-khoi-dong-phien.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-GEMINI.md-01-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "GEMINI.md references non-existent file: .agents/workflows/01-dong-phien.md",
+          "file": "GEMINI.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in GEMINI.md to correct path"
+        },
+        {
+          "id": "EC-11-AGENTS.md-L1-swarm-registry.md",
+          "severity": "LOCAL-FIX",
+          "category": "BROKEN_REF",
+          "detail": "AGENTS.md references non-existent file: .agents/quan-ly-quy-tac/L1-swarm-registry.md",
+          "file": "AGENTS.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-34",
+          "manual_reason": "Update reference in AGENTS.md to correct path"
+        },
+        {
+          "id": "EC-2-L2-CHANGELOG.md",
+          "severity": "LOCAL-FIX",
+          "category": "HPRF_CHECK",
+          "detail": "Missing HPRF Override Priority block: L2-CHANGELOG.md",
+          "file": ".agents\\rules\\L2-CHANGELOG.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-06"
+        },
+        {
+          "id": "EC-2-r15-onboarding-trigger.md",
+          "severity": "LOCAL-FIX",
+          "category": "HPRF_CHECK",
+          "detail": "Missing HPRF Override Priority block: r15-onboarding-trigger.md",
+          "file": ".agents\\rules\\r15-onboarding-trigger.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-06"
+        },
+        {
+          "id": "EC-3-s-chuan-hoa-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_4TIER",
+          "detail": "Skill 's-chuan-hoa-tai-lieu' missing subdirs: references",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+          "missing_dirs": [
+            "references"
+          ],
+          "auto_fixable": true,
+          "fix_pattern": "SHP-26"
+        },
+        {
+          "id": "EC-3-s-thiet-ke-bao-cao-bi",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_4TIER",
+          "detail": "Skill 's-thiet-ke-bao-cao-bi' missing subdirs: assets, references, scripts, evals",
+          "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+          "missing_dirs": [
+            "assets",
+            "references",
+            "scripts",
+            "evals"
+          ],
+          "auto_fixable": true,
+          "fix_pattern": "SHP-26"
+        },
+        {
+          "id": "EC-13-s-chuan-hoa-tai-lieu-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-chuan-hoa-tai-lieu' SKILL.md is 8870 bytes (8.7KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu\\SKILL.md",
+          "size_bytes": 8870,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-do-luong-hieu-suat-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-do-luong-hieu-suat' SKILL.md is 5545 bytes (5.4KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-do-luong-hieu-suat\\SKILL.md",
+          "size_bytes": 5545,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-dong-bo-muc-luc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-dong-bo-muc-luc' SKILL.md is 8367 bytes (8.2KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-dong-bo-muc-luc\\SKILL.md",
+          "size_bytes": 8367,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-giam-sat-tuan-thu-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-giam-sat-tuan-thu' SKILL.md is 5379 bytes (5.3KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-giam-sat-tuan-thu\\SKILL.md",
+          "size_bytes": 5379,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-quan-ly-kho-tri-thuc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-quan-ly-kho-tri-thuc' SKILL.md is 9893 bytes (9.7KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc\\SKILL.md",
+          "size_bytes": 9893,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-thiet-ke-kien-truc-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-thiet-ke-kien-truc' SKILL.md is 8823 bytes (8.6KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-thiet-ke-kien-truc\\SKILL.md",
+          "size_bytes": 8823,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-thiet-lap-kiem-duyet-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-thiet-lap-kiem-duyet' SKILL.md is 6130 bytes (6.0KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-thiet-lap-kiem-duyet\\SKILL.md",
+          "size_bytes": 6130,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-toi-uu-bo-nho-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-toi-uu-bo-nho' SKILL.md is 6056 bytes (5.9KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-toi-uu-bo-nho\\SKILL.md",
+          "size_bytes": 6056,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-13-s-xay-dung-quy-trinh-soft",
+          "severity": "LOCAL-FIX",
+          "category": "SKILL_SKELETON",
+          "detail": "Skill 's-xay-dung-quy-trinh' SKILL.md is 9017 bytes (8.8KB < 10KB) — under-developed",
+          "file": ".agents\\skills\\s-xay-dung-quy-trinh\\SKILL.md",
+          "size_bytes": 9017,
+          "threshold": 10240,
+          "auto_fixable": false,
+          "fix_pattern": "SHP-23",
+          "manual_reason": "Needs enrichment via skill-writer Route 3 (ADDIE) — add domain references, decision rules, guardrails"
+        },
+        {
+          "id": "EC-4-s-chuan-hoa-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-chuan-hoa-tai-lieu",
+          "file": ".agents\\skills\\s-chuan-hoa-tai-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-dong-bo-muc-luc",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-dong-bo-muc-luc",
+          "file": ".agents\\skills\\s-dong-bo-muc-luc",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-nghien-cuu-thi-truong",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-nghien-cuu-thi-truong",
+          "file": ".agents\\skills\\s-nghien-cuu-thi-truong",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-phan-tich-du-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-phan-tich-du-lieu",
+          "file": ".agents\\skills\\s-phan-tich-du-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-phan-tich-yeu-cau",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-phan-tich-yeu-cau",
+          "file": ".agents\\skills\\s-phan-tich-yeu-cau",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-quan-ly-du-an",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-quan-ly-du-an",
+          "file": ".agents\\skills\\s-quan-ly-du-an",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-quan-ly-kho-tri-thuc",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-quan-ly-kho-tri-thuc",
+          "file": ".agents\\skills\\s-quan-ly-kho-tri-thuc",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-tao-tai-lieu",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-tao-tai-lieu",
+          "file": ".agents\\skills\\s-tao-tai-lieu",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-4-s-thiet-ke-bao-cao-bi",
+          "severity": "LOCAL-FIX",
+          "category": "GHOST_SKILL",
+          "detail": "Ghost skill (unwired): s-thiet-ke-bao-cao-bi",
+          "file": ".agents\\skills\\s-thiet-ke-bao-cao-bi",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-11",
+          "manual_reason": "Requires semantic analysis to find the best agent/workflow host"
+        },
+        {
+          "id": "EC-12-w-khoi-tao-du-an-moi.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-khoi-tao-du-an-moi.md",
+          "file": ".agents\\workflows\\core-business\\w-khoi-tao-du-an-moi.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-quan-tri-du-an.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-quan-tri-du-an.md",
+          "file": ".agents\\workflows\\core-business\\w-quan-tri-du-an.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-cai-dat-giai-phap.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-cai-dat-giai-phap.md",
+          "file": ".agents\\workflows\\system-ops\\w-cai-dat-giai-phap.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-12-w-tao-quy-trinh-moi.md",
+          "severity": "SYSTEMIC-HALT",
+          "category": "TEMPLATE_CHECK",
+          "detail": "Unrendered template variable '{{PLACEHOLDER}}' found in w-tao-quy-trinh-moi.md",
+          "file": ".agents\\workflows\\system-ops\\w-tao-quy-trinh-moi.md",
+          "auto_fixable": false,
+          "fix_pattern": "SHP-00",
+          "manual_reason": "Run session-manager or script to inject correct workspace metadata"
+        },
+        {
+          "id": "EC-7-CHANGELOG.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): CHANGELOG.md",
+          "file": ".agents\\workflows\\CHANGELOG.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-WORKFLOW_INDEX.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): WORKFLOW_INDEX.md",
+          "file": ".agents\\workflows\\WORKFLOW_INDEX.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-dong-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-dong-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-khoi-dong-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-khoi-dong-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-khoi-dong-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-luu-phien.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-luu-phien.md",
+          "file": ".agents\\workflows\\system-ops\\w-luu-phien.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-onboarding-tour.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-onboarding-tour.md",
+          "file": ".agents\\workflows\\system-ops\\w-onboarding-tour.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-deploy-appendix.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-deploy-appendix.md",
+          "file": ".agents\\workflows\\system-ops\\components\\w-deploy-appendix.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        },
+        {
+          "id": "EC-7-w-00-xay-dung-quy-trinh.md",
+          "severity": "LOCAL-FIX",
+          "category": "WF_METADATA_CHECK",
+          "detail": "Workflow missing YAML metadata (description/triggers): w-00-xay-dung-quy-trinh.md",
+          "file": ".agents\\workflows\\_archive\\v1_backup\\w-00-xay-dung-quy-trinh.md",
+          "auto_fixable": true,
+          "fix_pattern": "SHP-WF01",
+          "manual_reason": "Run inject_wf_metadata.py script to auto-heal"
+        }
+      ]
+    },
+    "batch_B": {
+      "finding_count": 0,
+      "findings": []
+    },
+    "batch_C": {
+      "finding_count": 0,
+      "findings": []
+    }
+  }
+}
