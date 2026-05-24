@@ -2363,7 +2363,7 @@
             element.classList.toggle('active');
         }
 
-                        function handleFormSubmit(event) {
+                                function handleFormSubmit(event) {
             event.preventDefault();
             
             // Xác định form được submit
@@ -2383,8 +2383,8 @@
             const selectedAge = form.querySelector('input[type="radio"]:checked');
             if (selectedAge) childAge = selectedAge.value + ' tuổi';
             
-            // ⚠️ THAY THẾ ĐƯỜNG URL DƯỚI ĐÂY BẰNG URL GOOGLE SCRIPT CỦA BẠN SAU KHI DEPLOY
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwDz7pwkiVJPV1rDb5bcfzan6qJkzFKyiVRbic7kTgvlolypW_rfQiMaIhjD0CLKDuLOg/exec'; 
+            // ⚠️ ĐÃ ĐỔI SANG ĐƯỜNG LINK SHEET MONKEY CỰC KỲ ỔN ĐỊNH
+            const scriptUrl = 'https://api.sheetmonkey.io/form/f9Rr5UqsNXbtQQhLdiashz'; 
             
             // Thay đổi trạng thái nút Submit để tạo trải nghiệm mượt mà
             const submitBtn = form.querySelector('button[type="submit"]');
@@ -2392,19 +2392,35 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
             
-            // Sử dụng URLSearchParams để gửi dữ liệu dạng form truyền thống (tránh lỗi CORS và JSON)
+            // Sử dụng URLSearchParams và so khớp chính xác 100% với tên cột trên Google Sheet của bạn
             const formData = new URLSearchParams();
-            formData.append('parentName', parentName);
-            formData.append('phone', phone);
-            formData.append('childAge', childAge);
+            formData.append('Thời gian', new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }));
+            formData.append('Tên phụ huynh', parentName);
+            formData.append('Số điện thoại', phone);
+            formData.append('Độ tuổi của con', childAge);
             
-            // Gửi dữ liệu về Google Sheets thông qua Google Apps Script Web App
+            // Gửi dữ liệu về Google Sheets thông qua Sheet Monkey Webhook
             fetch(scriptUrl, {
                 method: 'POST',
-                mode: 'no-cors', // Tránh lỗi CORS trên trình duyệt
+                mode: 'no-cors', // Tránh lỗi CORS bảo mật trên trình duyệt
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
+                body: formData.toString()
+            })
+            .then(() => {
+                alert('Cảm ơn bạn đã đăng ký trải nghiệm! Chuyên gia MindX sẽ liên hệ hỗ trợ bạn kiểm tra năng lực công nghệ và sắp xếp lịch học thử miễn phí cho con trong vòng 24 giờ tới.');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Lỗi gửi form:', error);
+                alert('Có lỗi xảy ra khi gửi thông tin. Bạn vui lòng liên hệ hotline hoặc thử lại nhé!');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+        },
                 body: formData.toString()
             })
             .then(() => {
