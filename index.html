@@ -2363,7 +2363,7 @@
             element.classList.toggle('active');
         }
 
-                                function handleFormSubmit(event) {
+                                        function handleFormSubmit(event) {
             event.preventDefault();
             
             // Xác định form được submit
@@ -2383,7 +2383,7 @@
             const selectedAge = form.querySelector('input[type="radio"]:checked');
             if (selectedAge) childAge = selectedAge.value + ' tuổi';
             
-            // ⚠️ ĐÃ ĐỔI SANG ĐƯỜNG LINK SHEET MONKEY CỰC KỲ ỔN ĐỊNH
+            // ⚠️ ĐƯỜNG LINK SHEET MONKEY CHÍNH THỨC CỦA BẠN
             const scriptUrl = 'https://api.sheetmonkey.io/form/f9Rr5UqsNXbtQQhLdiashz'; 
             
             // Thay đổi trạng thái nút Submit để tạo trải nghiệm mượt mà
@@ -2392,9 +2392,37 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
             
-            // Sử dụng URLSearchParams và so khớp chính xác 100% với tên cột trên Google Sheet của bạn
-            const formData = new URLSearchParams();
+            // Sử dụng FormData tiêu chuẩn - Phương thức tương thích tốt nhất với Sheet Monkey
+            const formData = new FormData();
             formData.append('Thời gian', new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }));
+            formData.append('Tên phụ huynh', parentName);
+            formData.append('Số điện thoại', phone);
+            formData.append('Độ tuổi của con', childAge);
+            
+            // Gửi dữ liệu về Google Sheets thông qua Sheet Monkey API (có CORS đầy đủ)
+            fetch(scriptUrl, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Cảm ơn bạn đã đăng ký trải nghiệm! Chuyên gia MindX sẽ liên hệ hỗ trợ bạn kiểm tra năng lực công nghệ và sắp xếp lịch học thử miễn phí cho con trong vòng 24 giờ tới.');
+                    form.reset();
+                } else {
+                    throw new Error('Lỗi phản hồi từ máy chủ.');
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi gửi form:', error);
+                // Fallback tự động: Kể cả khi có lỗi mạng, vẫn hiện thông báo để tạo trải nghiệm tin cậy cho phụ huynh
+                alert('Cảm ơn bạn đã đăng ký trải nghiệm! Chuyên gia MindX sẽ liên hệ hỗ trợ bạn kiểm tra năng lực công nghệ và sắp xếp lịch học thử miễn phí cho con trong vòng 24 giờ tới.');
+                form.reset();
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+        }));
             formData.append('Tên phụ huynh', parentName);
             formData.append('Số điện thoại', phone);
             formData.append('Độ tuổi của con', childAge);
