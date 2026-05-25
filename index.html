@@ -119,31 +119,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-mindx-red selection:text-white">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-3 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <!-- MindX Logo (Text + Custom SVG X) -->
-                <div class="flex items-center">
-                    <div class="flex items-baseline">
-                        <span class="text-mindx-red font-black text-[2.5rem] tracking-tighter" style="font-family: 'Plus Jakarta Sans', sans-serif;">mind</span>
-                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-1 relative top-1">
-                            <!-- Đường gạch chéo \ -->
-                            <path d="M14 10 L28 38" stroke="#E31F26" stroke-width="5" stroke-linecap="round"/>
-                            <path d="M26 10 L40 38" stroke="#E31F26" stroke-width="5" stroke-linecap="round"/>
-                            <!-- Đường gạch chéo / -->
-                            <path d="M40 10 L26 38" stroke="#E31F26" stroke-width="5" stroke-linecap="round"/>
-                            <path d="M28 10 L14 38" stroke="#E31F26" stroke-width="5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <span class="font-heading font-black text-mindx-navy text-xl hidden sm:block ml-3 uppercase tracking-wide">Tech & AI School</span>
-            </div>
-            <a href="#register-form" class="bg-mindx-red hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-full transition-all shadow-glow-red hover:scale-105">
-                Đăng ký ngay
-            </a>
-        </div>
-    </nav>
+
 
     <!-- SECTION 1: HERO SECTION -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
@@ -883,15 +859,7 @@
             }, 300);
         }
 
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-md');
-            } else {
-                nav.classList.remove('shadow-md');
-            }
-        });
+
 
         // --- MINI GAME LOGIC (Green Earth Rescue Demo) ---
         window.onload = function() {
